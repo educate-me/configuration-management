@@ -1,0 +1,15 @@
+---
+# This Playbook installs Python 2, which is required by Ansible modules to run on target machines, on all hosts
+- hosts: all
+  # Have to disable fact gathering as ansible has direct dipendency on Python 2
+  gather_facts: no
+
+  # None of the tasks/pre-tasks in this playbook are dependent on Python 2
+  pre_tasks:
+
+    # Basic update and up
+    - name: Update & Upgrade APT packages
+      raw: sudo apt-get -y update && sudo apt-get -y upgrade
+
+    - name: 'install python2'
+      raw: sudo apt-get -y install python
