@@ -1,0 +1,15 @@
+---
+# Refer this link for setting up the webservers and webclients as per your requirements.
+# https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+webservers:
+  hosts:
+    ws1:
+      ansible_host: 18.224.202.164
+webclients:
+  hosts:
+    wc1:
+      ansible_host: 18.216.136.164
+    18.222.152.135:
+    18.224.202.164:
+    18.191.209.22:
+    127.0.0.1:

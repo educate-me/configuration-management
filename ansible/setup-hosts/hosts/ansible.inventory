@@ -1,0 +1,4 @@
+host1   ansible_port=5555   ansible_host=18.216.136.164 ansible_connection=ssh
+
+[targets]
+localhost   ansible_connection=local
